@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Webinar gratuito sobre ciberseguridad en dispositivos IoT. Aprende a proteger tu hogar inteligente de vulnerabilidades en tostadoras y otros dispositivos conectados. Regístrate ahora.">
     <title>Toaster Webinar</title>
 </head>
 <body>
@@ -167,7 +168,7 @@
             <h2>Registro</h2>
             <p>Completa el siguiente formulario para ser parte del evento:</p>
 
-            <form action="" method="POST">
+            <form action="https://esuorg.netlify.app/" method="POST">
                 <label for="nombre">Nombre Completo:</label>
                 <br>
                 <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
@@ -178,7 +179,7 @@
                 <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required>
                 <br><br>
 
-                <label for="dia">Día de participación:</label>
+                <label>Día de participación:</label>
                 <br>
                 <fieldset>
                     <legend>Día de participación</legend>
@@ -210,6 +211,7 @@
                 <br>
 
                 <button type="submit" aria-label="Enviar formulario de registro" onclick="alert('¡Enviado!')">Enviar</button>
+            </form>
         </section>
 
         <section id="contacto" tabindex="0">
@@ -223,13 +225,13 @@
         <p>La ciberseguridad es más importante que nunca. Mantente informado sobre las últimas amenazas y cómo protegerte.</p>
         <ul>
             <li>
-                <a href="" 
+                <a href="https://esuorg.netlify.app/" 
                 rel="noopener noreferrer">
                 Nuevo ataque a dispositivos IoT
                 </a>
             </li>
             <li>
-                <a href="" 
+                <a href="https://esuorg.netlify.app/" 
                 rel="noopener noreferrer">
                 Consejos para asegurar tu hogar inteligente
                 </a>
@@ -265,7 +267,8 @@
     <footer>
         <img src="static/img/logo_esu.svg" 
             alt="Logo de ESU" 
-            width="100">
+            width="100"
+            tabindex="-1">
         <p>© 2025 ESU org</p>
     </footer>
 </body>
