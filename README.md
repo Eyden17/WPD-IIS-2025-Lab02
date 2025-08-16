@@ -1,6 +1,6 @@
 # Webinar de Ciberseguridad en Tostadoras IoT <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" width="50" height="50">
 
-💻 **Laboratorio 2**  
+💻 **Laboratorio 2 - Portafolio 01**  
 
 **Nombre:** Eyden Su Díaz
 **Carné:**  *2023025837*
@@ -34,7 +34,7 @@ Sitio web informativo para un webinar ficticio sobre vulnerabilidades de ciberse
 
 ---
 
-## 🌐 URL Pública
+## 🌐 URL Pública Netlify
 🔗 [https://esuorg.netlify.app/](https://esuorg.netlify.app/)
 
 ---
@@ -51,7 +51,48 @@ La primera vez que se realizó la validación, existían errores. Primeramente p
 
 - **HTML**: 0 errores, 2 warnings ([Ver validación](https://validator.w3.org/nu/?doc=https%3A%2F%2Fesuorg.netlify.app%2F))
 
-Los warnings se indican en la parte de "Testimonios" donde los `article` no tienen un encabezado (h2-h6). Una forma de solución podría ser el utilizar `aria-label` en esos artículos ya que poner encabezados puede ser muy redundante.
+Los warnings se indican en la parte de "Testimonios" donde los `article` no tienen un encabezado (h2-h6). 
+
+### Problema Actual:
+```html
+    <article>
+        <blockquote>
+            <p><em>"Este webinar me abrió los ojos..."</em></p>
+            <footer>— Elder L.</footer>
+        </blockquote>
+    </article>
+```
+
+Una forma de solución podría ser el utilizar `aria-label` en esos artículos ya que poner encabezados puede ser muy redundante.
+
+### Solución Corregida:
+```html
+    <article aria-label="Testimonio de Elder L.">
+        <blockquote>
+            <p><em>"Este webinar me abrió los ojos sobre la seguridad de mis dispositivos en la casa. ¡Altamente recomendado!"</em></p>
+            <footer>— Elder L.</footer>
+        </blockquote>
+    </article>
+
+    <article aria-label="Testimonio de Brasly V.">
+        <blockquote>
+            <p><em>"Excelente información y muy bien presentado. Aprendí mucho sobre cómo proteger mi hogar inteligente."</em></p>
+            <footer>— Brasly V.</footer>
+        </blockquote>
+    </article>
+```
+
+Cambiar esto trae los siguientes beneficios:
+1. **Mejora la accesibilidad**: Los screen readers pueden identificar mejor cada testimonio
+2. **Valida correctamente**: Cumple con los estándares W3C
+3. **Mantiene la semántica**: Cada artículo tiene ahora un título identificativo
+4. **Mejor SEO**: Los encabezados ayudan a los motores de búsqueda a entender la estructura del HTML
+
+### Validación final en W3C
+
+![Captura 03 W3C Validator](static/img/w3c_validation_3.png)
+
+> ✅ Una vez aplicado los `aria-label` en los `article` no muestra errores
 
 ---
 
@@ -78,6 +119,7 @@ Los warnings se indican en la parte de "Testimonios" donde los `article` no tien
 | Mejores Prácticas| 100                | -                                        |
 | SEO              | 100                | -                                        |
 
+> 📑NOTA: Estos puntos a mejorar (imágenes y tamaños) se tiene contemplado tratarlos en la parte de diseño, este laboratorio se centraba más en la estructura semántica del HTML y sus componentes.
 
 ---
 
@@ -145,7 +187,7 @@ Enlaces a redes sociales usan el nombre de la plataforma como texto visible
         <a href="https://instagram.com/webinar_ciberseguridad"
         target="_blank" 
         rel="noopener noreferrer"
-        aria-label="Síguenos en Instagram (se abre en nueva ventana)">
+        aria-label="Seguínos en Instagram (se abre en nueva ventana)">
         Instagram  <!-- Nombre reconocible de la plataforma -->
         </a>
     </li>
