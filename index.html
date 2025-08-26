@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Webinar gratuito sobre ciberseguridad en dispositivos IoT. Aprende a proteger tu hogar inteligente de vulnerabilidades en tostadoras y otros dispositivos conectados. Regístrate ahora.">
     <title>Toaster Webinar</title>
+    
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/overrides.css">
+
 </head>
 <body>
     <header>
-        <h1>¡Invitación - Webinar de Ciberseguridad en Tostadoras!</h1>
+        <h1 style="color: white">
+            ¡Invitación - Webinar de Ciberseguridad en Tostadoras!
+        </h1>
     </header>
 
     <figure>
@@ -90,29 +98,46 @@
         <section id="exponentes" tabindex="0">
             <h2>Exponentes</h2>
             <p>Conocé a nuestros expertos en ciberseguridad que compartirán sus conocimientos y experiencias:</p>
-            <article>
-                <h3>Ing. Eyden Su</h3>
-                <p><em>Experto en Redes y Ciberseguridad</em></p>
-                <figure>
-                    <img src="static/img/presenter_eyden_su.jpg" 
-                        alt="Ing. Eyden Su, experto en ciberseguridad"
-                        tabindex="0"
-                        width="300">
-                    <figcaption>Conferencista principal del webinar.</figcaption>
-                </figure>
-            </article>
+            
+            <div class="cards-container">
+                <article class="card">
+                    <h3>Ing. Eyden Su</h3>
+                    <span class="badge">Principal</span>
+                    <p><em>Experto en Redes y Ciberseguridad</em></p>
+                    <figure>
+                        <img src="static/img/presenter_eyden_su.jpg" 
+                            alt="Ing. Eyden Su, experto en ciberseguridad"
+                            tabindex="0"
+                            width="300">
+                        <figcaption>Conferencista principal del webinar.</figcaption>
+                    </figure>
+                </article>
 
-            <article>
-                <h3>Ing. María López</h3>
-                <p><em>Investigadora de IoT</em></p>
-                <figure>
-                    <img src="static/img/presenter_maria_lopez.jpg" 
-                        alt="Ing. María López, investigadora en IoT"
-                        tabindex="0"
-                        width="300">
-                    <figcaption>Especialista invitada en dispositivos IoT.</figcaption>
-                </figure>
-            </article>
+                <article class="card">
+                    <h3>Ing. María López</h3>
+                    <span class="badge">Invitada</span>
+                    <p><em>Investigadora de IoT</em></p>
+                    <figure>
+                        <img src="static/img/presenter_maria_lopez.jpg" 
+                            alt="Ing. María López, investigadora en IoT"
+                            tabindex="0"
+                            width="300">
+                        <figcaption>Especialista invitada en dispositivos IoT.</figcaption>
+                    </figure>
+                </article>
+
+                <article class="card">
+                    <h3>Dr. Carlos Méndez</h3>
+                    <span class="badge">Invitado</span>
+                    <p><em>Profesor y Consultor en Seguridad</em></p>
+                    <figure>
+                        <img src="static/img/presenter_carlos_mendez.jpeg" 
+                            alt="Dr. Carlos Méndez, profesor y consultor en seguridad"
+                            tabindex="0"
+                            width="300">
+                        <figcaption>Consultor en seguridad de redes y sistemas.</figcaption>
+                    </figure>
+            </div>
         </section>
 
         <section id="temas" tabindex="0">
@@ -171,12 +196,12 @@
             <form action="https://esuorg.netlify.app/" method="POST">
                 <label for="nombre">Nombre Completo:</label>
                 <br>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
+                <input class="input-field" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
                 <br><br>
 
                 <label for="correo">Correo Electrónico:</label>
                 <br>
-                <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required>
+                <input class="input-field" type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required>
                 <br><br>
 
                 <label>Día de participación:</label>
@@ -210,7 +235,7 @@
                 </fieldset>
                 <br>
 
-                <button type="submit" aria-label="Enviar formulario de registro" onclick="alert('¡Enviado!')">Enviar</button>
+                <button class="btn" type="submit" aria-label="Enviar formulario de registro" onclick="alert('¡Enviado!')">Enviar</button>
             </form>
         </section>
 
