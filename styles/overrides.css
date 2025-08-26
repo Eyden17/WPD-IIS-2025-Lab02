@@ -1,0 +1,10 @@
+.card .badge {
+  position: absolute !important;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--c-accent) !important;
+}
+
+#contacto {
+  margin-bottom: 0 !important;
+}
