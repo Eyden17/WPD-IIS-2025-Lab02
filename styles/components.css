@@ -1,0 +1,112 @@
+
+.btn {
+  background-color: var(--c-accent);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--c-accent-dark);
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--c-accent-light);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e8eef3;
+  color: var(--c-text);
+  padding: 0.3rem 0.6rem;
+  margin: 0.2rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.input-field {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.input-field:focus-visible {
+  border-color: var(--c-accent);
+  outline: 2px solid var(--c-accent-light);
+  outline-offset: 2px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: var(--c-bg-secondary);;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--c-accent-dark);
+}
+
+.card p {
+  color: var(--c-accent-dark);
+}
+
+.card figure {
+  display: block;
+  margin: 1rem 1rem 0 0;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  width: 100%;
+  height: 50vh;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: contain;
+}
+
+.card figcaption {
+  font-size: 0.85rem;
+  color: var(--c-muted);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
