@@ -8,3 +8,72 @@
 #contacto {
   margin-bottom: 0 !important;
 }
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+}
+
+.hamburger {
+  width: 18px;
+  height: 2px;
+  background: var(--c-accent-dark);
+  position: relative;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background: var(--c-accent-dark);
+  left: 0;
+}
+.hamburger::before { top: -6px; }
+.hamburger::after  { top: 6px; }
+
+#main-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-toggle:checked ~ #main-nav {
+  display: flex;
+}
+
+#main-nav a {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  color: var(--c-accent-dark);
+}
+
+h1 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+main, aside {
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .nav-toggle-label { display: none; }
+  #main-nav {
+    display: flex !important;
+    flex-direction: column;
+  }
+}
+

@@ -1,14 +1,40 @@
+/* Mobile first */
 body {
-	display: grid;
-	grid-template-areas:
-		"header header header"
-		"figure nav aside"
-		"main main aside"
-		"footer footer footer";
-  grid-template-columns: 3fr 2fr 1fr;
-  grid-template-rows: auto auto auto;
-	gap: 1rem;
-	min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "figure"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+/* Tablet (>=768px) */
+@media (min-width: 768px) {
+  body {
+    grid-template-areas:
+      "header header"
+      "figure nav"
+      "main aside"
+      "footer footer";
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Desktop (>=1024px) */
+@media (min-width: 1024px) {
+  body {
+    grid-template-areas:
+      "header header header"
+      "figure nav aside"
+      "main main aside"
+      "footer footer footer";
+    grid-template-columns: 3fr 2fr 1fr;
+  }
 }
 
 header {
@@ -22,6 +48,21 @@ header {
   position: relative;
   overflow: hidden;
 }
+
+.hero {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: block;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 body > figure {
   grid-area: figure;
@@ -353,6 +394,12 @@ aside {
 	border-radius: 10px;
 	padding: 1rem 1.5rem;
 	box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 480px) {
+  aside {
+    margin: 0 1.5rem;
+  }
 }
 
 aside h2 {
