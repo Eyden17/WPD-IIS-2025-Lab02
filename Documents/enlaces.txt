@@ -1,4 +1,12 @@
 Eyden Su Diaz - 2023025837
 
+Laboratorio 02:
+URL del sitio desplegado (GitHub Pages o Netlify): https://main--esuorg.netlify.app/
+
+Laboratorio 03:
+URL del pull request público en GitHub: https://github.com/Eyden17/WPD-IIS-2025-Lab02/pull/1
+URL del sitio desplegado (Netlify): https://lab3-selectores-boxmodel--esuorg.netlify.app/
+
+Laboratorio 05:
 URL del repositorio público en GitHub: https://github.com/Eyden17/WPD-IIS-2025-Lab02
-URL del sitio desplegado (GitHub Pages o Netlify): https://esuorg.netlify.app/
+URL del sitio desplegado (Netlify): https://lab5-responsive--esuorg.netlify.app/
