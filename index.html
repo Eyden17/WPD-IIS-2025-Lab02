@@ -19,16 +19,24 @@
         </h1>
     </header>
 
-    <figure>
-        <img src="static/img/a_hacker_with_a_toaster.jpg" 
-            alt="Hacker encapuchado frente a una tostadora con códigos binarios en pantalla"
-            tabindex="-1"
-            width="600">
+    <figure class="hero">
+        <picture>
+            <source media="(min-width:1024px)" srcset="static/img/hero-desktop.jpg">
+            <source media="(min-width:768px)" srcset="static/img/hero-tablet.jpg">
+            <img src="static/img/hero-mobile.jpg"
+                alt="Hacker encapuchado frente a una tostadora con códigos binarios en pantalla">
+        </picture>
     </figure>
 
     <nav aria-label="Navegación principal del sitio">
-        <h2>Índice</h2>
-        <ul>
+        <h2 class="sr-only">Índice</h2>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-controls="main-nav" aria-label="Abrir menú">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span class="hamburger" aria-hidden="true"></span>
+        </label>
+
+        <ul id="main-nav">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#agenda">Agenda</a></li>
             <li><a href="#exponentes">Exponentes</a></li>
