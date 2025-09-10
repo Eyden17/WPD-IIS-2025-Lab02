@@ -1,0 +1,40 @@
+INSTRUCCIONES — ACTIVIDAD “PULIDO RESPONSIVE”
+
+Objetivo
+- Convertir el laboratorio 3 en un diseño responsive con TRES versiones: móvil, tablet y desktop.
+
+Breakpoints (mobile-first)
+- Móvil: ≤ 480 px
+- Tablet: ≥ 768 px
+- Desktop: ≥ 1024 px
+
+Requisitos mínimos
+1) Menú hamburguesa
+- En móvil: botón abre/cierra el menú (usa aria-controls y aria-expanded).
+- En tablet/desktop: menú siempre visible y ocultar el botón.
+
+2) Cards legibles
+- Móvil: 1 columna
+- Tablet: 2 columnas
+- Desktop: 3 columnas
+- Buen interlineado y espaciado paddins y margenes
+
+3) Sin scroll horizontal (en todos los breakpoints)
+- Imágenes/iframes/tablas con max-width:100% y height:auto.
+- Evitar anchos fijos que rompan el viewport
+
+4) Evitar scroll vertical excesivo en móvil
+
+5) Dirección de arte responsive
+- En el hero usar <picture> con 3 archivos: hero-mobile / hero-tablet / hero-desktop.
+- Elementos decorativos: visibles en desktop y ocultos en móvil si estorban (alt="" y aria-hidden="true").
+
+6) Tecnologías a usar
+- Media queries + CSS Grid + Flexbox (.
+- Unidades relativas (rem, %, clamp() opcional para tipografía).
+
+7) Diseño bonito... mas realista para las paginas
+
+Entrega
+- Rama: lab5-responsive (creada desde el repo del Lab 3).
+- Deploy: URL de la rama (Netlify o GitHub Pages).
